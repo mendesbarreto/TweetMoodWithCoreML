@@ -12,9 +12,11 @@
 		A5FAA31B1F6F079F000B8A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FAA3191F6F079F000B8A8E /* Main.storyboard */; };
 		A5FAA31D1F6F079F000B8A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5FAA31C1F6F079F000B8A8E /* Assets.xcassets */; };
 		A5FAA3201F6F079F000B8A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FAA31E1F6F079F000B8A8E /* LaunchScreen.storyboard */; };
+		F358AB41E4CF38AAE562EEED /* Pods_TweetMoodWithCoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD96BD77C1BBA570F58D2D /* Pods_TweetMoodWithCoreML.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5411068FA34F5D7DB58EF8A9 /* Pods-TweetMoodWithCoreML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetMoodWithCoreML.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetMoodWithCoreML/Pods-TweetMoodWithCoreML.debug.xcconfig"; sourceTree = "<group>"; };
 		A5FAA3121F6F079F000B8A8E /* TweetMoodWithCoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetMoodWithCoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FAA3151F6F079F000B8A8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FAA3171F6F079F000B8A8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		A5FAA31C1F6F079F000B8A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5FAA31F1F6F079F000B8A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5FAA3211F6F079F000B8A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B92138665A059B5AA7D0C60F /* Pods-TweetMoodWithCoreML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetMoodWithCoreML.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetMoodWithCoreML/Pods-TweetMoodWithCoreML.release.xcconfig"; sourceTree = "<group>"; };
+		FBAD96BD77C1BBA570F58D2D /* Pods_TweetMoodWithCoreML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetMoodWithCoreML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F358AB41E4CF38AAE562EEED /* Pods_TweetMoodWithCoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		663E10F9A340914FFD18B8CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBAD96BD77C1BBA570F58D2D /* Pods_TweetMoodWithCoreML.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		801C08BD38075AA6AADB1899 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5411068FA34F5D7DB58EF8A9 /* Pods-TweetMoodWithCoreML.debug.xcconfig */,
+				B92138665A059B5AA7D0C60F /* Pods-TweetMoodWithCoreML.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A5FAA3091F6F079E000B8A8E = {
 			isa = PBXGroup;
 			children = (
 				A5FAA3141F6F079F000B8A8E /* TweetMoodWithCoreML */,
 				A5FAA3131F6F079F000B8A8E /* Products */,
+				801C08BD38075AA6AADB1899 /* Pods */,
+				663E10F9A340914FFD18B8CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5FAA3241F6F079F000B8A8E /* Build configuration list for PBXNativeTarget "TweetMoodWithCoreML" */;
 			buildPhases = (
+				4F2AFAEA7D0AC3738D797FEF /* [CP] Check Pods Manifest.lock */,
 				A5FAA30E1F6F079F000B8A8E /* Sources */,
 				A5FAA30F1F6F079F000B8A8E /* Frameworks */,
 				A5FAA3101F6F079F000B8A8E /* Resources */,
+				6393816D958BBFAEBFB23C01 /* [CP] Embed Pods Frameworks */,
+				8E09B1FD40F9CD59BF65E12D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F2AFAEA7D0AC3738D797FEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6393816D958BBFAEBFB23C01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TweetMoodWithCoreML/Pods-TweetMoodWithCoreML-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E09B1FD40F9CD59BF65E12D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TweetMoodWithCoreML/Pods-TweetMoodWithCoreML-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5FAA30E1F6F079F000B8A8E /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		A5FAA3251F6F079F000B8A8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5411068FA34F5D7DB58EF8A9 /* Pods-TweetMoodWithCoreML.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +371,7 @@
 		};
 		A5FAA3261F6F079F000B8A8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92138665A059B5AA7D0C60F /* Pods-TweetMoodWithCoreML.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
