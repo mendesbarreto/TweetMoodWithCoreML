@@ -23,7 +23,6 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupTwitterButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
