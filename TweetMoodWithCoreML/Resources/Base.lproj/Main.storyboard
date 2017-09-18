@@ -5,10 +5,37 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tiwitter View Controller-->
+        <scene sceneID="kny-zf-h8I">
+            <objects>
+                <tableViewController id="ffA-wH-nBf" customClass="TiwitterViewController" customModule="TweetMoodWithCoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cZd-eS-bzw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="up5-5Q-JSq">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="up5-5Q-JSq" id="P1A-ek-hBk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ffA-wH-nBf" id="ajq-Ml-10Y"/>
+                            <outlet property="delegate" destination="ffA-wH-nBf" id="WE5-go-B2c"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9IU-7C-LdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-874" y="38"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,22 +44,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-fz-IPO">
-                                <rect key="frame" x="67" y="215" width="240" height="341"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-tl-2UF">
+                                <rect key="frame" x="67" y="229" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8hJ-fz-IPO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Otu-NA-ece"/>
-                            <constraint firstAttribute="trailing" secondItem="8hJ-fz-IPO" secondAttribute="trailing" id="vTz-ck-PBR"/>
-                            <constraint firstItem="8hJ-fz-IPO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="voR-oD-PzA"/>
-                            <constraint firstAttribute="bottom" secondItem="8hJ-fz-IPO" secondAttribute="bottom" id="yyu-Kc-P7j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v2k-tl-2UF" secondAttribute="trailing" id="2Hc-X5-D5w"/>
+                            <constraint firstItem="v2k-tl-2UF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BHA-AJ-yLq"/>
+                            <constraint firstItem="v2k-tl-2UF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CRr-gM-iV4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="v2k-tl-2UF" secondAttribute="bottom" id="iP3-Lw-0Zd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="8hJ-fz-IPO" id="fu7-wk-vDy"/>
+                        <outlet property="tableView" destination="v2k-tl-2UF" id="x67-TO-9ET"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

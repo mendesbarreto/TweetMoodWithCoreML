@@ -12,7 +12,9 @@ import TwitterKit
 final class ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
-    private var client: TWTRAPIClient!
+    
+    let twitterGateway = TwitterGateway()
+    let userMoodService = UserMoodService()
     
     var tweets: [TWTRTweet] = [] {
         didSet {
@@ -27,14 +29,14 @@ final class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Twitter.sharedInstance().logIn(completion: { (session, error) in
-            if let session = session {
-                print("signed in as \(session.userName)");
-                self.client = TWTRAPIClient(userID: session.userID)
-                self.featchData()
-            } else {
-                print("error: \(error!.localizedDescription)");
-            }
+        twitterGateway.startTwitterSession(onComplete: {
+            self.fetchData()
+        })
+    }
+    
+    private func fetchData() {
+        twitterGateway.getTweets(onComplete: { (tweets) in
+            self.tweets = tweets
         })
     }
     
@@ -46,18 +48,6 @@ final class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-    
-    private func featchData() {
-        client.loadTweet(withID: "20") { (tweet, error) in
-            if let t = tweet {
-                self.tweets = [t]
-            } else {
-                print("Failed to load Tweet: \(error.debugDescription)")
-            }
-        }
-    }
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -70,12 +60,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TWTRTweetTableViewCell
         let tweet = tweets[indexPath.row]
         cell.configure(with: tweet)
-        cell.tweetView.backgroundColor = .blue
         cell.tweetView.showBorder = true
         cell.tweetView.showActionButtons = true
-        print(tweet.text)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let tweetCell = cell as! TWTRTweetTableViewCell
+        let tweet = tweets[indexPath.row]
+        let cellBackgroundCollor = userMoodService.predictMoodWith(string: tweet.text).asColor()
+        tweetCell.tweetView.backgroundColor = cellBackgroundCollor
+    }
+    
+    
 }
 
 

@@ -12,6 +12,12 @@
 		A5FAA31B1F6F079F000B8A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FAA3191F6F079F000B8A8E /* Main.storyboard */; };
 		A5FAA31D1F6F079F000B8A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5FAA31C1F6F079F000B8A8E /* Assets.xcassets */; };
 		A5FAA3201F6F079F000B8A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FAA31E1F6F079F000B8A8E /* LaunchScreen.storyboard */; };
+		A5FAA3291F6F3DC2000B8A8E /* TwitterGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAA3281F6F3DC2000B8A8E /* TwitterGateway.swift */; };
+		A5FAA32B1F6F43D5000B8A8E /* TiwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAA32A1F6F43D5000B8A8E /* TiwitterViewController.swift */; };
+		A5FAA32E1F6F4A32000B8A8E /* StringTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAA32D1F6F4A32000B8A8E /* StringTokenizer.swift */; };
+		A5FAA3301F6F4A50000B8A8E /* UserMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAA32F1F6F4A50000B8A8E /* UserMood.swift */; };
+		A5FAA3321F6F4A7A000B8A8E /* UserMoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAA3311F6F4A7A000B8A8E /* UserMoodService.swift */; };
+		A5FAA3331F6F4AA1000B8A8E /* SentimentPolarity.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5FAA32C1F6F4A07000B8A8E /* SentimentPolarity.mlmodel */; };
 		F358AB41E4CF38AAE562EEED /* Pods_TweetMoodWithCoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD96BD77C1BBA570F58D2D /* Pods_TweetMoodWithCoreML.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +30,12 @@
 		A5FAA31C1F6F079F000B8A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5FAA31F1F6F079F000B8A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5FAA3211F6F079F000B8A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5FAA3281F6F3DC2000B8A8E /* TwitterGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterGateway.swift; sourceTree = "<group>"; };
+		A5FAA32A1F6F43D5000B8A8E /* TiwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiwitterViewController.swift; sourceTree = "<group>"; };
+		A5FAA32C1F6F4A07000B8A8E /* SentimentPolarity.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentPolarity.mlmodel; sourceTree = "<group>"; };
+		A5FAA32D1F6F4A32000B8A8E /* StringTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTokenizer.swift; sourceTree = "<group>"; };
+		A5FAA32F1F6F4A50000B8A8E /* UserMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMood.swift; sourceTree = "<group>"; };
+		A5FAA3311F6F4A7A000B8A8E /* UserMoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMoodService.swift; sourceTree = "<group>"; };
 		B92138665A059B5AA7D0C60F /* Pods-TweetMoodWithCoreML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetMoodWithCoreML.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetMoodWithCoreML/Pods-TweetMoodWithCoreML.release.xcconfig"; sourceTree = "<group>"; };
 		FBAD96BD77C1BBA570F58D2D /* Pods_TweetMoodWithCoreML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetMoodWithCoreML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +94,11 @@
 				A5FAA3151F6F079F000B8A8E /* AppDelegate.swift */,
 				A5FAA3171F6F079F000B8A8E /* ViewController.swift */,
 				A5FAA3211F6F079F000B8A8E /* Info.plist */,
+				A5FAA3281F6F3DC2000B8A8E /* TwitterGateway.swift */,
+				A5FAA32A1F6F43D5000B8A8E /* TiwitterViewController.swift */,
+				A5FAA32D1F6F4A32000B8A8E /* StringTokenizer.swift */,
+				A5FAA32F1F6F4A50000B8A8E /* UserMood.swift */,
+				A5FAA3311F6F4A7A000B8A8E /* UserMoodService.swift */,
 			);
 			path = TweetMoodWithCoreML;
 			sourceTree = "<group>";
@@ -89,6 +106,7 @@
 		A5FAA3271F6F07B2000B8A8E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5FAA32C1F6F4A07000B8A8E /* SentimentPolarity.mlmodel */,
 				A5FAA3191F6F079F000B8A8E /* Main.storyboard */,
 				A5FAA31C1F6F079F000B8A8E /* Assets.xcassets */,
 				A5FAA31E1F6F079F000B8A8E /* LaunchScreen.storyboard */,
@@ -220,6 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FAA3181F6F079F000B8A8E /* ViewController.swift in Sources */,
+				A5FAA3291F6F3DC2000B8A8E /* TwitterGateway.swift in Sources */,
+				A5FAA32B1F6F43D5000B8A8E /* TiwitterViewController.swift in Sources */,
+				A5FAA3301F6F4A50000B8A8E /* UserMood.swift in Sources */,
+				A5FAA3331F6F4AA1000B8A8E /* SentimentPolarity.mlmodel in Sources */,
+				A5FAA32E1F6F4A32000B8A8E /* StringTokenizer.swift in Sources */,
+				A5FAA3321F6F4A7A000B8A8E /* UserMoodService.swift in Sources */,
 				A5FAA3161F6F079F000B8A8E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
