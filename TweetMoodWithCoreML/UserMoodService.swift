@@ -13,11 +13,13 @@ final class UserMoodService {
     private let model = SentimentPolarity()
     
     func predictWith(string: String) -> SentimentPolarityOutput {
-        let wordsCounterDic = StringTokenizer(string: string).tokenize()
+        let wordsCountDic = StringTokenizer(string: string).tokenize()
         var prediction: SentimentPolarityOutput!
         
+        let model = SentimentPolarity()
+        
         do {
-            prediction = try model.prediction(input: wordsCounterDic)
+            prediction = try model.prediction(input: wordsCountDic)
         } catch let error {
             print("Problem to predict the input data: \(error.localizedDescription)")
         }
